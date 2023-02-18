@@ -243,19 +243,48 @@ header .navbar ul li a:hover{
 
 .about .row .counter {
     flex: 1 1 30rem;
-    display: flex;
+    display: block;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 
-.about .row .counter .box {
-    width: 20rem;
-    background: #222;
-    text-align: center;
-    padding: 2rem;
-    margin: 2rem;
+.about .row .counter .skill-item h3{
+    color: var(--white);
+    line-height: 40px;
+    padding-top: 1rem;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+   
 }
+.about .row .counter .skill-item .counter-progress  {
+    background-color: var(--white);
+    height: 7px;
+    border-radius: 4px;
+    width: 90%;
+}
+.about .row .counter .counter-progress{
+    margin-bottom: 30px;
+}
+
+.about .row .counter .skill-item .counter-progress .counter-progress-in {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--pink);
+}
+
+.about .row .counter .skill-item .counter-progress .counter-progress-in .skill-percent {
+    color: var(--pink);
+    position: relative;
+    right: -450px;
+    top: -33px;
+    font-size: 2rem;
+}
+
 
 .about .row .counter .box span {
     font-size: 4rem;
@@ -265,6 +294,8 @@ header .navbar ul li a:hover{
 .about .row .counter .box h3 {
     color: var(--white);
 }
+
+
 
 /* education */
 

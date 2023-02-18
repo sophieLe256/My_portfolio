@@ -1,8 +1,0 @@
-{
-    "name": "sophie-project",
-    "description": "sophie's first js project",
-    "version": "0.1.0",
-    "scripts": {
-      "run": "node src/index.js"
-    }
-  }
