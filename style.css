@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Slab:wght@300;400&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
 
 :root {
     --pink: rgb(255, 130, 172);
@@ -204,6 +205,7 @@ header .navbar ul li a:hover{
 
 .home h1 span {
     color: var(--pink);
+    font-family: 'Pacifico';
 }
 
 .home p {
@@ -309,7 +311,7 @@ header .navbar ul li a:hover{
 }
 
 .education .box-container .box {
-    width: 27rem;
+    width: 30rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: .2rem solid #fff;
@@ -356,38 +358,40 @@ header .navbar ul li a:hover{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 0;
-    padding:0 6rem;
+    padding: 1rem 15rem;
 }
 
 .project .box-container .box {
-    width: 30rem;
+    width: 50rem;
     height: 20rem;
     margin: 4rem 1rem;
-    padding-left: 4rem;
+    padding-left: 5rem;
     border-left: .2rem solid #fff;
     position: relative;
 }
 
 .project .box-container .box span {
-    font-size: 1.5rem;
-    color: var(--white);
-    background: #333;
+    font-size: 3rem;
+    color: var(--pink);
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
 }
 
 .project .box-container .box h6{
-    font-size: 1rem;
+    font-size: 2rem;
     color: var(--white);
-    background: #333;
     margin-top: 0.7rem;
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
 }
 
-.project .box-container .box p{
+.project .box-container .box  a{
     font-size: 1rem;
+    color: var(--white);
+}
+
+.project .box-container .box p{
+    font-size: 1.5rem;
     color: var(--white);
     background: #333;
     margin-top: 0.5rem;
