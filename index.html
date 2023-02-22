@@ -15,6 +15,10 @@
 
     <!-- css file link -->
     <link rel="stylesheet" href="./style.css">
+
+    <!-- React CND links -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 
 
@@ -73,7 +77,7 @@
                 I am also comfortable working with various design tools such as Figma and Adobe Photoshop. <br>
                 
                 &nbsp;&nbsp;&nbsp;&nbsp;When I'm not coding, you can find me exploring new hiking trails, trying out new recipes in the kitchen, or working on my latest art project. <br>
-                I love to challenge myself and constantly learn new things, both in and out of the tech world. <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;I love to challenge myself and constantly learn new things, both in and out of the tech world. <br>
                 
                 If you have a project you'd like to work on together or just want to say hello, feel free to reach out through the contact form. I'm always excited to meet new people and work on new projects!
             </p>
@@ -195,7 +199,7 @@
                     <span>Portfolio</span>
                     <h6>Language: HTML, CSS, Javascript</h6>
                     <a href="https://sophiele256.github.io/My_portfolio/" class=""></a>
-                    <p>Describle</p>
+                    <p>A personal portfolio website that you created using GitHub Pages.</p>
                 </div>
 
                 <div class="box">
@@ -215,7 +219,7 @@
                     
                 <div class="box">
                     <i class="fa-solid fa-laptop-code"></i>
-                    <span>Project Name</span>
+                    <span>TicTacToe Game</span>
                     <h6>Language</h6>
                     <p>Describle</p>
                 </div>
@@ -223,16 +227,16 @@
                 <div class="box">
                     <i class="fa-solid fa-laptop-code"></i>
                     <span>Project Name</span>
-                    <h6>Language</h6>
+                    <h6>Figma</h6>
                     <p>Describle</p>
                 </div>
 
                 <div class="box">
                     <i class="fa-solid fa-laptop-code"></i>
                     <span>Project Name</span>
-                    <h6>Language</h6>
+                    <h6a>Language</h6a personal portfolio website that you created using GitHub Pages.>
                     <p>Describle</p>
-                </div>
+                </div>s
             </div>
         </section>
 
@@ -253,12 +257,43 @@
                 </div>
 
                 <form action="">
-                    <input type="text" placeholder="Name" class="box">
-                        <input type="email" placeholder="Email" class="box">
-                        <input type="project" placeholder="Project" class="box">
+                        <div class = "box">
+                            <div class="name">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Name" id="name">
 
-                        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
-                        <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i></button>
+                            </div>
+
+                            <div class="email">
+                                <i class="info-icon fas fa-envelope"></i> 
+                                <input type="email" placeholder="Email" id="email">
+
+
+                            </div>
+                            
+                            <div class="project">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <input type="project" placeholder="Project" id="project">
+
+
+                            </div>
+
+                            <div class="message-box">
+                                <textarea name="" id="msg" cols="30" rows="10" class="box message" placeholder="Message"></textarea>
+
+
+                            </div>
+
+                            <div class="button">
+                                <button id="send">Send</button>
+
+                            </div>
+
+                            <div class="message">
+                                <div class="success" id="success">Your Message Sucessfully Sent!</div>
+                            </div>
+        
+                        </div>
                     </form>
                 </div>
             </div>
