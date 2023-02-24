@@ -426,7 +426,7 @@ header .navbar ul li a:hover{
 .contact .row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -434,32 +434,45 @@ header .navbar ul li a:hover{
     flex: 1 1 30rem;
     padding: 1rem 6rem;
 }
+.contact .row .container {
+    flex: 1 1 50rem;
+    padding: 2rem 5rem;
+    background: var(--pink);
+    border-radius: 10px;
+    margin: 3rem 6rem;
+}
+
+.contact .row .container .box {
+    display: block;
+    justify-content: center;
+    margin: 1rem 0;
+}
 
 .contact .row .content .info {
     text-transform: lowercase;
 }
 
-.contact .row form {
+/* .contact .row form {
     font-size: 1.5rem;
     flex: 1 1 50rem;
     padding: 0 6rem;
     margin: 2rem;
     margin-bottom: 4rem;   
-}
+} */
 
-.contact .row form .box {
+/* .contact .row form .box {
     padding: 1.5rem;
     margin: 1rem 0;
     background: #333;
     color: var(--white);
     text-transform: none;
     width: 100%;
-}
+} */
 
-.contact .row form .message {
+/* .contact .row form .message {
     height: 15rem;
     resize: none;
-}
+} */
 
 .contact .row .content .title {
     text-transform: uppercase;
@@ -504,9 +517,158 @@ header .navbar ul li a:hover{
     height: 7rem; 
 }
 
+.contact .row {
+    justify-content: space-between;
+
+}
+
+.contact .row .container {
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, var(--pink), var(--white));
+    /* background: url(https://media.istockphoto.com/id/996829592/vector/space-background-bright-milky-way-with-nebula-and-stars-color-galaxy-with-stardust-abstract.jpg?s=612x612&w=0&k=20&c=M0qyjGi6VOm4EblP2hACF18O0ST_rBti8Cj8MxuUNmQ=); */
+    border: 1px solid rgb(255, 253, 253);
+
+}
+.contact .row .container .box .name .name-icon {
+    color: rgb(140, 140, 140);
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+
+}
+
+.contact .row .container .box .name input {
+    width: 80%;
+}
+.contact .row .container .box .name {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    margin: 1rem 0;
+    width: 30rem;
+}
+.contact .row .container .box #name {
+    background: transparent;
+}
 
 
+.contact .row .container .box .project .project-icon {
+    color: rgb(140, 140, 140);
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem; 
+}
+.contact .row .container .box .project {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    margin: 1rem 0;
+    width: 30rem;
+}
 
+.contact .row .container .box .project input {
+    width: 80%;
+}
+
+
+.contact .row .container .box #project {
+    background: transparent;
+
+}
+
+.contact .row .container .box .email .email-icon {
+    color: rgb(140, 140, 140);
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+.contact .row .container .box .email {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    border: 1px solid black;
+    background: transparent;
+    border-radius: 5px;
+    margin: 1rem 0;
+    width: 30rem;
+}
+
+.contact .row .container .box .email input {
+    width: 80%;
+}
+
+
+.contact .row .container .box #email {
+    background: transparent;
+}
+
+.contact .row .container .box {
+    background: transparent;
+    margin: 2rem 0;
+}
+
+.contact .row .container .box .message-box {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+.contact .row .container .box .message-box input {
+    width: 100%;
+}
+.contact .row .container .box .button {
+    width: 30%;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    color: #eee;
+}
+.contact .row .container .box .button button {
+    width: 100%;
+    font-size: 8px;
+    border-radius: 2rem;
+    background: transparent;
+    border: 1px solid black;
+
+}
+.contact .row .container .box .button button:hover{
+    background: var(--pink);
+}
+
+.contact .row .container .box .message .success {
+    font-size: 10px;
+    color: green;
+    position: absolute;
+    animation: button .3s linear;
+    display: none;
+}
+
+.contact .row .container .box .message .danger {
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    transition: 0.3s;
+    animation: button .5s linear;
+    display: none;
+}
+
+@keyframes button {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }   
+}
 
 
 
@@ -571,6 +733,6 @@ header .navbar ul li a:hover{
 
 }
 
-/* The alert message box */
+
 
 
