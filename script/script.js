@@ -39,20 +39,21 @@ $(document).ready(function(){
 
 
 // Message - Noti
-function message(e) {
-    e.preventDefault();
+function message() {
     var Name = document.getElementById('name');
     var email = document.getElementById('email');
+    var project = document.getElementById('project');
     var msg = document.getElementById('msg');
     const success = document.getElementById('success');
     const danger = document.getElementById('danger');
 
-    if(Name.value === '' || email.value === '' || msg.value === ''){
+    if(Name.value === '' || email.value === '' || msg.value === '' || project.value === ''){
         danger.style.display = 'block';
     } else {
         setTimeout(() => {
             Name.value = '';
             email.value = '';
+            project.value = '';
             msg.value = '';
         }, 2000);
 

@@ -600,6 +600,7 @@ header .navbar ul li a:hover{
 
 .contact .row .container .box .email input {
     width: 80%;
+    text-transform: none;
 }
 
 
@@ -653,8 +654,8 @@ header .navbar ul li a:hover{
     font-size: 10px;
     color: red;
     position: absolute;
-    transition: 0.3s;
-    animation: button .5s linear;
+    transition: 0.2s;
+    animation: button .3s linear;
     display: none;
 }
 
@@ -735,4 +736,12 @@ header .navbar ul li a:hover{
 
 
 
-
+/*
+function quickCheck(arr, elem) {
+    if (arr.indexOf(elem) >= 0) {
+      return true;
+    }
+    return false;
+  }
+  console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+  */

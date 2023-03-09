@@ -3,7 +3,8 @@
 
 Tool used
 - HTML, CSS and JavaScript
-* Font Awesome 5
-+ 
++ Responsive Website
+* Font Awesome 6
+
 
 This is the **live demo** of the project .
