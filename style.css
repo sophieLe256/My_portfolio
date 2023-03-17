@@ -403,6 +403,10 @@ header .navbar ul li a:hover{
     margin-top: 0.5rem;
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
+    width: 300px;
+    height: 70px;
+    text-transform: none;
+    
 }
 
 .project .box-container .box i{
@@ -526,9 +530,10 @@ header .navbar ul li a:hover{
     justify-items: center;
     display: flex;
     justify-content: center;
-    background: linear-gradient(180deg, var(--pink), var(--white));
+    background: #eee;
     /* background: url(https://media.istockphoto.com/id/996829592/vector/space-background-bright-milky-way-with-nebula-and-stars-color-galaxy-with-stardust-abstract.jpg?s=612x612&w=0&k=20&c=M0qyjGi6VOm4EblP2hACF18O0ST_rBti8Cj8MxuUNmQ=); */
     border: 1px solid rgb(255, 253, 253);
+    /* box-shadow: ; */
 
 }
 .contact .row .container .box .name .name-icon {
