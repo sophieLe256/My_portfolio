@@ -312,12 +312,12 @@ header .navbar ul li a:hover{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 1rem 0;
-    padding:0 6rem;
+    padding: 1rem 25rem;
+
 }
 
 .education .box-container .box {
-    width: 30rem;
+    width: 35rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: .2rem solid #fff;
@@ -369,7 +369,7 @@ header .navbar ul li a:hover{
 
 .project .box-container .box {
     width: 50rem;
-    height: 20rem;
+    height: 30rem;
     margin: 4rem 1rem;
     padding-left: 5rem;
     border-left: .2rem solid #fff;
@@ -377,14 +377,39 @@ header .navbar ul li a:hover{
 }
 
 .project .box-container .box span {
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--pink);
     padding: 0.5rem 0.5rem;
-    border-radius: 2rem;
+    width: 10px;
+}
+
+.project .box-container .box .box-link {
+    background-color: #333;
+    width: 40px;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 7px;
+    padding-top: 3px;
+}
+
+.project .box-container .box .box-link a{
+    font-size: 10px;
+    color: var(--white);
+    margin-left: 11px;
+    text-decoration: none;
+}
+
+.project .box-container .box ul {
+    /* list-style: none; */
+    color: var(--white);
+}
+
+.project .box-container .box li{
+    font-size: 10px;
 }
 
 .project .box-container .box h6{
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--white);
     margin-top: 0.7rem;
     padding: 0.5rem 0.5rem;
@@ -530,9 +555,9 @@ header .navbar ul li a:hover{
     justify-items: center;
     display: flex;
     justify-content: center;
-    background: #eee;
+    background: rgb(255, 255, 255);
     /* background: url(https://media.istockphoto.com/id/996829592/vector/space-background-bright-milky-way-with-nebula-and-stars-color-galaxy-with-stardust-abstract.jpg?s=612x612&w=0&k=20&c=M0qyjGi6VOm4EblP2hACF18O0ST_rBti8Cj8MxuUNmQ=); */
-    border: 1px solid rgb(255, 253, 253);
+    /* border: 1px solid rgb(255, 253, 253); */
     /* box-shadow: ; */
 
 }
@@ -656,7 +681,7 @@ header .navbar ul li a:hover{
 }
 
 .contact .row .container .box .message .danger {
-    font-size: 10px;
+    font-size: 12px;
     color: red;
     position: absolute;
     transition: 0.2s;
@@ -740,13 +765,3 @@ header .navbar ul li a:hover{
 }
 
 
-
-/*
-function quickCheck(arr, elem) {
-    if (arr.indexOf(elem) >= 0) {
-      return true;
-    }
-    return false;
-  }
-  console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
-  */
