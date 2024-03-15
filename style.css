@@ -4,6 +4,7 @@
 :root {
     --pink: rgb(255, 130, 172);
     --white: rgb(255, 255, 255);
+    --black: #000;
 }
 
 * {
@@ -16,6 +17,11 @@
     border: none;
     text-transform: capitalize;
     transition: all 0.2s linear;
+}
+
+body {
+    background: var(--white); /* Change background to white */
+    color: var(--black); /* Change text color to black */
 }
 
 *::selection {
@@ -41,7 +47,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 body{
-    background: #111;
+    background: var(--white);
     overflow-x: hidden;
     padding-left: 35rem;
     font-family: 'Roboto';
@@ -55,8 +61,8 @@ section{
 
 .btn {
     padding: 0.7rem 3rem;
-    background: #333;
-    color: #fff;
+    background: var(--black);
+    color: var(--white);
     cursor: pointer;
     margin-top: 1rem;
     font-size: 2rem;
@@ -77,8 +83,8 @@ section{
     margin: 0 6rem;
     font-size: 4rem;
     padding: 1rem;
-    border-bottom: 0.1rem solid #fff;
-    color: var(--white);
+    border-bottom: 0.1rem solid black;
+    color: var(--black);
 }
 
 .heading span{
@@ -194,12 +200,12 @@ header .navbar ul li a:hover{
 
 .home h3 {
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .home h1 {
     font-size: 5rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 
@@ -209,8 +215,8 @@ header .navbar ul li a:hover{
 }
 
 .home p {
-    font-size: 2rem;
-    color: #eee; 
+    font-size: 1.5rem;
+    color: var(--black); 
     padding: 1rem 0;
     text-transform: none;
     line-height: 5rem;
@@ -221,61 +227,82 @@ header .navbar ul li a:hover{
     font-size: 2.5rem;
     font-weight: 400;
 }
+
 /* about */
 
-.about .row{
+.about .row {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items at the start */
     justify-content: center;
     flex-wrap: wrap;
     padding: 1rem 0;
-
 }
 
 .about .row .info {
-    flex: 1 1 48rem;
-    padding: 2rem 6rem;
+    flex: 1 1 50%; /* Adjust flex property */
+    padding: 2rem 3rem;
 }
 
 .about .row .info h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--pink);
     padding: 1rem 0;
     font-weight: normal;
 }
 
 .about .row .info h3 span {
-    color: #eee;
+    color: var(--black);
     padding: 0 0.5rem;
 }
 
 .about .row .counter {
-    flex: 1 1 30rem;
-    display: block;
-    justify-content: center;
+    flex: 1 1 50%; /* Adjust flex property */
+    display: flex; /* Add display flex */
     flex-wrap: wrap;
+    justify-content: center; /* Align items at the center */
+}
+.about .row .counter .skill-item {
+    flex: 0 1 calc(50% - 2rem); /* Adjust width of skill-item */
+    padding: 1rem; /* Add padding */
+    margin: 1rem; /* Add margin for spacing */
 }
 
-
 .about .row .counter .skill-item h3{
-    color: var(--white);
+    color: var(--black);
     line-height: 40px;
     padding-top: 1rem;
     font-weight: 400;
     font-size: 16px;
     text-transform: capitalize;
+    transform: translateY(50px);
    
 }
-.about .row .counter .skill-item .counter-progress  {
-    background-color: var(--white);
+.about .row .counter .skill-item .counter-progress {
+    background-color: var(--black);
     height: 7px;
     border-radius: 4px;
-    width: 90%;
+    width: 100%;
+    position: relative; /* Add position relative */
+    margin-bottom: 30px;
 }
 .about .row .counter .counter-progress{
     margin-bottom: 30px;
 }
 
+
+.about .row .counter .skill-item .counter-progress .skill-percent {
+    color: var(--pink);
+    font-size: 1rem; /* Adjust font size */
+    position: absolute; /* Add position absolute */
+    top: -30px; /* Adjust top position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%) scaleX(0); /* Hide initially */
+    transition: transform 0.5s ease; /* Add transition for smooth effect */
+}
+
+.about .row .counter .skill-item:hover .counter-progress .skill-percent {
+    transform: translateX(-50%) scaleX(1); /* Run animation on hover */
+}
 .about .row .counter .skill-item .counter-progress .counter-progress-in {
     position: relative;
     left: 0;
@@ -283,13 +310,18 @@ header .navbar ul li a:hover{
     height: 100%;
     border-radius: 4px;
     background-color: var(--pink);
+    width: 0; /* Initially start with no width */
+    transition: width 0.5s ease; /* Add transition for smooth effect */
 }
+
+.about .row .counter .skill-item:hover .counter-progress .counter-progress-in {
+    width: calc(var(--width) * 1%); /* Set width based on skill-percent */
+}
+
 
 .about .row .counter .skill-item .counter-progress .counter-progress-in .skill-percent {
     color: var(--pink);
     position: relative;
-    right: -450px;
-    top: -33px;
     font-size: 2rem;
 }
 
@@ -300,7 +332,7 @@ header .navbar ul li a:hover{
 }
 
 .about .row .counter .box h3 {
-    color: var(--white);
+    color: var(--black);
 }
 
 
@@ -320,31 +352,70 @@ header .navbar ul li a:hover{
     width: 35rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
-    border-left: .2rem solid #fff;
+    border-left: .2rem solid var(--black);
     position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Add more shadow */
+    transition: box-shadow 0.3s ease; /* Add transition for smooth effect */
 }
+
+.project .box-container .box:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* Define animation keyframes */
+@keyframes example {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.project .box-container .box {
+    width: 100%;
+    height: 100%;
+    margin: 4rem 1rem;
+    padding: 5rem; 
+    border: .2rem solid var(--black);
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    animation: example 1s infinite; /* Add animation */
+}
+
 
 .education .box-container .box span {
-    font-size: 1.5rem;
-    background: #222;
-    color: var(--white);
+    font-size: 2rem;
+    color: var(--pink);
     border-radius: 5rem;
-    padding: .5rem 2.5rem;
+   
 }
 
-.education .box-container .box h3{
-    font-size: 2rem;
-    color: var(--white);
-    padding-top: 1.5rem;
+.education .box-container .box .awards-icon{
+    display: flex;
+}
+
+.education .box-container .box h5{
+    /* font-size: 2rem; */
+    color: var(--black);
+    margin: 1rem 1rem;
 }
 
 .education .box-container .box p{
     font-size: 1.4rem;
-    color: #eee;
+    color: var(--black);
     padding-top: 1rem 0;
 }
 
-.education .box-container .box i{
+.education .box-container .box .icon{
     position: absolute;
     top: -1.5rem;
     left: -2.5rem;
@@ -368,13 +439,17 @@ header .navbar ul li a:hover{
 }
 
 .project .box-container .box {
-    width: 50rem;
-    height: 30rem;
+    width: 100%;
+    height: 100%;
     margin: 4rem 1rem;
-    padding-left: 5rem;
-    border-left: .2rem solid #fff;
-    position: relative;
+    padding: 5rem; 
+    border: .2rem solid var(--black);
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
 }
+
 
 .project .box-container .box span {
     font-size: 2rem;
@@ -383,25 +458,21 @@ header .navbar ul li a:hover{
     width: 10px;
 }
 
-.project .box-container .box .box-link {
-    background-color: #333;
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
-    margin-top: 7px;
-    padding-top: 3px;
+
+.project .box-container .box .link {
+    display: flex;
 }
 
-.project .box-container .box .box-link a{
+.project .box-container .box .link a{
     font-size: 10px;
-    color: var(--white);
+    color: var(--black);
     margin-left: 11px;
     text-decoration: none;
 }
 
 .project .box-container .box ul {
     /* list-style: none; */
-    color: var(--white);
+    color: var(--black);
 }
 
 .project .box-container .box li{
@@ -410,7 +481,7 @@ header .navbar ul li a:hover{
 
 .project .box-container .box h6{
     font-size: 1.5rem;
-    color: var(--white);
+    color: var(--black);
     margin-top: 0.7rem;
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
@@ -418,13 +489,13 @@ header .navbar ul li a:hover{
 
 .project .box-container .box  a{
     font-size: 1rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .project .box-container .box p{
     font-size: 1.5rem;
-    color: var(--white);
-    background: #333;
+    color: var(--black);
+    background: var(--white);
     margin-top: 0.5rem;
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
@@ -434,7 +505,13 @@ header .navbar ul li a:hover{
     
 }
 
-.project .box-container .box i{
+
+.project .box-container .box .details .link {
+    display: flex;
+}
+
+
+.project .box-container .box .icon i{
     position: absolute;
     top: -1.5rem;
     left: -2.5rem;
@@ -444,10 +521,25 @@ header .navbar ul li a:hover{
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
-    color: var(--white);
+    color: var(--black);
     background: var(--pink);
 }
 
+.project .box-container .box .content {
+    flex: 1;
+    margin-right: 1rem; 
+}
+.project .box-container .box .picture-box {
+    flex: 1;
+    text-align: right;
+    margin-left: 1rem;
+    margin-top: 10%;
+}
+
+.project .box-container .box .picture-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 /* Contact */
@@ -481,31 +573,10 @@ header .navbar ul li a:hover{
     text-transform: lowercase;
 }
 
-/* .contact .row form {
-    font-size: 1.5rem;
-    flex: 1 1 50rem;
-    padding: 0 6rem;
-    margin: 2rem;
-    margin-bottom: 4rem;   
-} */
-
-/* .contact .row form .box {
-    padding: 1.5rem;
-    margin: 1rem 0;
-    background: #333;
-    color: var(--white);
-    text-transform: none;
-    width: 100%;
-} */
-
-/* .contact .row form .message {
-    height: 15rem;
-    resize: none;
-} */
 
 .contact .row .content .title {
     text-transform: uppercase;
-    color: #fff;
+    color: var(--black);
     font-size: 3rem;
     padding-bottom: 2rem;
 }
@@ -513,7 +584,7 @@ header .navbar ul li a:hover{
 .contact .row .content .info h3{
     display: flex;
     align-items: center;
-    color: var(--white);
+    color: var(--black);
     font-size: 2rem;
     padding: 1rem 0;
     font-weight: normal;
@@ -556,9 +627,6 @@ header .navbar ul li a:hover{
     display: flex;
     justify-content: center;
     background: rgb(255, 255, 255);
-    /* background: url(https://media.istockphoto.com/id/996829592/vector/space-background-bright-milky-way-with-nebula-and-stars-color-galaxy-with-stardust-abstract.jpg?s=612x612&w=0&k=20&c=M0qyjGi6VOm4EblP2hACF18O0ST_rBti8Cj8MxuUNmQ=); */
-    /* border: 1px solid rgb(255, 253, 253); */
-    /* box-shadow: ; */
 
 }
 .contact .row .container .box .name .name-icon {
